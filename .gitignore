@@ -6,6 +6,9 @@ build
 
 /out/
 /.idea/
+/main.fasting.iml
+/main.fasting.ipr
+/main.fasting.iws
 /fasting.iml
 /fasting.ipr
 /fasting.iws

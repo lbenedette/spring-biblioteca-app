@@ -1,4 +1,4 @@
-package fasting;
+package com.biblioteca.controller;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
