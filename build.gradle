@@ -13,12 +13,32 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.mybatis:mybatis:3.5.3'
+    implementation 'org.mybatis:mybatis-spring:2.0.3'
+    implementation 'org.postgresql:postgresql:42.2.8'
     runtimeClasspath 'org.springframework.boot:spring-boot-devtools:2.2.2.RELEASE'
-    testCompile 'org.junit.jupiter:junit-jupiter-api:5.5.2'
-    testCompile 'org.mockito:mockito-core:3.2.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
+    testImplementation 'org.mockito:mockito-core:3.2.0'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    testImplementation 'org.mybatis:mybatis-migrations:3.3.6'
+    testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:2.1.1'
+}
+
+task createDb(type: Exec) {
+    workingDir 'db'
+    commandLine './create.sh', 'biblioteca'
+}
+
+task migrateDb(type: Exec) {
+    workingDir 'db/migrations'
+    commandLine './mybatis/bin/migrate', 'up'
+}
+
+task createTestDb(type: Exec) {
+    workingDir 'db'
+    commandLine './create.sh', 'biblioteca_test'
 }
 
 test {
