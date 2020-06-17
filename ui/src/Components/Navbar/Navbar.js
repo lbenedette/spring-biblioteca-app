@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+function Navbar() {
   return (
     <div>
       <span className="navbar__logo-name">Biblioteca</span>
@@ -13,3 +13,5 @@ export default function Navbar() {
     </div>
   );
 }
+
+export default Navbar;

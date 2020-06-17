@@ -1,5 +1,7 @@
-import React from "react";
+import React from 'react';
 
-export default function Greetings() {
+function Greetings() {
   return <div>Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!</div>
 }
+
+export default Greetings;
