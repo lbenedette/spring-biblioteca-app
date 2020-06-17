@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
+import Greetings from "../Components/Greetings/Greetings";
 
 function App() {
   return (
-    <div>Hello World</div>
+    <Greetings />
   );
 }
 
