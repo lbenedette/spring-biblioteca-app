@@ -1,4 +1,4 @@
-package com.biblioteca.controller;
+package com.biblioteca.presenter;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
