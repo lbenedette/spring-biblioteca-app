@@ -55,6 +55,11 @@ task migrateDb(type: Exec) {
     commandLine './mybatis/bin/migrate', 'up'
 }
 
+task loadSeedData(type: Exec) {
+    workingDir 'db'
+    commandLine './load_sql_file.sh', 'biblioteca', 'sample_data.sql'
+}
+
 task createTestDb(type: Exec) {
     workingDir 'db'
     commandLine './create.sh', 'biblioteca_test'
