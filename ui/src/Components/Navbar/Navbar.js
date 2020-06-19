@@ -12,6 +12,9 @@ function Navbar() {
         <li>
           <Link to="/books">Books</Link>
         </li>
+        <li>
+          <Link to="/createAccount">Create Account</Link>
+        </li>
       </ul>
     </div>
   );
